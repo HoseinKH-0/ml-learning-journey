@@ -1,17 +1,37 @@
-# پروژه ۳: رگرسیون خطی با scikit-learn
-موضوع: استفاده از کتابخانه‌های استاندارد برای مدل‌سازی
-زبان: پایتون با کتابخانه‌های scikit-learn، pandas و matplotlib
-هدف: آشنایی با ابزارهای حرفه‌ای و کار با دیتاست واقعی
+# پروژه ۳: پیش‌بینی دمای ملبورن با scikit-learn
 
-این پروژه چه کاری انجام می‌دهد؟
+همون مفهوم پروژه‌ی ۲، این‌بار با استفاده از scikit-learn به‌جای
+پیاده‌سازی دستی، روی یه دیتاست واقعی و بزرگ.
 
-دیتاست واقعی دمای کمینه روزانه شهر ملبورن را از یک فایل CSV بارگذاری می‌کند.
+## این پروژه چیکار می‌کنه؟
+- دیتاست دمای کمینه‌ی روزانه‌ی ملبورن (۱۹۸۱ تا ۱۹۹۰) رو با pandas می‌خونه
+- یه مدل LinearRegression با scikit-learn می‌سازه و آموزش می‌ده
+- دمای روز بعد از آخرین داده رو پیش‌بینی می‌کنه
+- نموداری از داده‌های واقعی و خط پیش‌بینی مدل رسم می‌کنه
 
-با استفاده از کلاس LinearRegression از کتابخانه‌ی scikit-learn، یک مدل رگرسیون خطی ساخته و آن را با داده‌ها آموزش می‌دهد.
+## نحوه‌ی اجرا
 
-دمای روز بعد از آخرین داده‌ی موجود را پیش‌بینی می‌کند.
+pip install numpy pandas matplotlib scikit-learn
 
-نموداری از داده‌های واقعی به همراه خط رگرسیون به دست آمده از مدل را رسم می‌کند.
+python melbourne_temp_prediction.py
 
-نحوه اجرا و پیش‌نیازها:
-کتابخانه‌های مورد نیاز: numpy, pandas, matplotlib, scikit-learn
+
+
+---
+
+# Project 3: Melbourne Temperature Prediction with scikit-learn
+
+Same concept as Project 2, but using scikit-learn instead of a manual
+implementation, applied to a real, larger dataset.
+
+## What this project does
+- Reads the Melbourne daily minimum temperature dataset (1981-1990) with pandas
+- Builds and trains a scikit-learn LinearRegression model
+- Predicts the temperature for the day after the last available data point
+- Plots the actual data points and the model's regression line
+
+## How to run
+
+pip install numpy pandas matplotlib scikit-learn
+
+python melbourne_temp_prediction.py
