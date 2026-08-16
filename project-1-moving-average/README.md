@@ -1,19 +1,34 @@
-# پروژه ۱: پیش‌بینی با میانگین متحرک (Moving Average)
-موضوع: ساده‌ترین روش ممکن برای پیش‌بینی
-زبان: پایتون خالص به همراه کتابخونه‌های NumPy و Matplotlib
-هدف: درک مفهوم پیش‌بینی با استفاده از میانگین چند داده‌ی اخیر
+# پروژه ۱: پیش‌بینی با میانگین متحرک
 
-این پروژه چه کاری انجام می‌ده؟
+اولین پروژه‌ی من در مسیر یادگیری ML. یه پیش‌بینی ساده بر پایه‌ی
+میانگین چند داده‌ی اخیر، بدون استفاده از هیچ کتابخونه‌ی یادگیری ماشین.
 
-از کاربر می‌خواهد تعداد روزهای داده، تعداد روزهای اخیر برای محاسبه میانگین، و تعداد اعداد واقعی را مشخص کند.
+## این پروژه چیکار می‌کنه؟
+- یه سری داده‌ی عددی (تصادفی یا وارد شده توسط کاربر) می‌سازه
+- با میانگین گرفتن از چند تای آخرین داده، مقدار بعدی رو پیش‌بینی می‌کنه
+- خطای هر پیش‌بینی رو نسبت به مقدار واقعی محاسبه و ذخیره می‌کنه
+- در پایان، آمار خطاها (میانگین، کمترین، بیشترین) و نموداری از روند خطا نشون می‌ده
 
-داده‌های اولیه را به طور تصادفی تولید می‌کند.
+## نحوه‌ی اجرا
 
-میانگین روزهای اخیر را به عنوان پیش‌بینی روز بعد محاسبه و نمایش می‌دهد.
+pip install numpy matplotlib
+python moving_average.py
 
-در یک حلقه، اعداد واقعی (ورودی کاربر یا تولید تصادفی) را دریافت می‌کند و خطای هر پیش‌بینی را محاسبه می‌نماید.
 
-در پایان، آمار کلی خطاها (میانگین، کمترین و بیشترین خطا) و یک نمودار از روند تغییرات خطا را نمایش می‌دهد.
+---
 
-نحوه اجرا و پیش‌نیازها:
-کتابخانه‌های مورد نیاز: numpy و matplotlib
+# Project 1: Moving Average Prediction
+
+My first project in learning ML. A simple prediction based on the
+average of recent data points, without using any ML library.
+
+## What this project does
+- Generates a series of numeric data (random or user-entered)
+- Predicts the next value using the average of the most recent entries
+- Calculates and stores the error of each prediction vs. the actual value
+- Shows error statistics (mean, min, max) and a chart of the error trend
+
+## How to run
+
+pip install numpy matplotlib
+python moving_average.py
