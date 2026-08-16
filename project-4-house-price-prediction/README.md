@@ -15,6 +15,7 @@
 ## نحوه‌ی اجرا
 
 pip install numpy pandas matplotlib scikit-learn
+
 python tehran_house_price.py
 
 
@@ -41,6 +42,7 @@ Predicting Tehran house prices using several features at once
 ## How to run
 
 pip install numpy pandas matplotlib scikit-learn
+
 python tehran_house_price.py
 
 
