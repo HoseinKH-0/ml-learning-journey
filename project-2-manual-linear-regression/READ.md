@@ -34,4 +34,5 @@ Regression, without scikit-learn, to understand the underlying math.
 ## How to run
 
 pip install numpy matplotlib
+
 python manual_linear_regression.py
