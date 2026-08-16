@@ -1,15 +1,37 @@
-# پروژه ۲: پیاده‌سازی دستی رگرسیون خطی (Manual Linear Regression)
-موضوع: پیاده‌سازی فرمول رگرسیون از صفر
-زبان: پایتون با NumPy
-هدف: درک ریاضیات پشت رگرسیون خطی بدون استفاده از کتابخانه‌های آماده
+# پروژه ۲: رگرسیون خطی دستی (دما)
 
-این پروژه چه کاری انجام می‌دهد؟
+پیاده‌سازی دستی فرمول Least Squares برای Linear Regression، بدون
+استفاده از scikit-learn، تا منطق ریاضی پشت صحنه رو یاد بگیرم.
 
-دمای روز را از کاربر دریافت و به فایل متنی temperatures.txt اضافه می‌کند.
+## این پروژه چیکار می‌کنه؟
+- دمای روزانه رو از کاربر می‌گیره و توی یه فایل ذخیره می‌کنه
+- با فرمول Least Squares (نوشته‌شده با NumPy)، شیب و عرض از مبدأ خط
+  بهینه رو محاسبه می‌کنه
+- دمای روز بعد رو پیش‌بینی می‌کنه
+- نموداری از داده‌های واقعی و خط پیش‌بینی رسم می‌کنه
 
-داده‌های ذخیره‌شده را از فایل خوانده و با استفاده از فرمول‌های Least Squares، ضرایب خط رگرسیون (شیب و عرض از مبدأ) را محاسبه می‌کند.
+## نحوه‌ی اجرا
 
-دمای روز بعد را پیش‌بینی کرده و نموداری از نقاط داده و خط رگرسیون رسم می‌کند.
+pip install numpy matplotlib
 
-نحوه اجرا و پیش‌نیازها:
-کتابخانه‌های مورد نیاز: numpy و matplotlib
+python manual_linear_regression.py
+
+
+---
+
+# Project 2: Manual Linear Regression (Temperature)
+
+A from-scratch implementation of the Least Squares formula for Linear
+Regression, without scikit-learn, to understand the underlying math.
+
+## What this project does
+- Takes daily temperature input from the user and saves it to a file
+- Calculates the best-fit line's slope and intercept using the Least
+  Squares formula (implemented with NumPy)
+- Predicts the next day's temperature
+- Plots the actual data points and the regression line
+
+## How to run
+
+pip install numpy matplotlib
+python manual_linear_regression.py
