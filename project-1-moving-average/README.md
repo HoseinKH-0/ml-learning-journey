@@ -12,6 +12,7 @@
 ## نحوه‌ی اجرا
 
 pip install numpy matplotlib
+
 python moving_average.py
 
 
@@ -31,4 +32,5 @@ average of recent data points, without using any ML library.
 ## How to run
 
 pip install numpy matplotlib
+
 python moving_average.py
