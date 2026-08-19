@@ -15,6 +15,7 @@
 ## نحوه‌ی اجرا
 
 pip install pandas numpy matplotlib scikit-learn
+
 python student_pass_fail_prediction.py
 
 
@@ -37,4 +38,5 @@ study hours (not their exact score).
 ## How to run
 
 pip install pandas numpy matplotlib scikit-learn
+
 python student_pass_fail_prediction.py
