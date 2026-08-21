@@ -10,11 +10,12 @@
 - در پایان، آمار خطاها (میانگین، کمترین، بیشترین) و نموداری از روند خطا نشون می‌ده
 
 ## نحوه‌ی اجرا
-
+```bash
 pip install numpy matplotlib
-
+```
+```bash
 python moving_average.py
-
+```
 
 ---
 
