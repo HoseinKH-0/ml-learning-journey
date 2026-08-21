@@ -26,7 +26,7 @@ pip install -r requirements.txt
   python moving_average.py
   ```
 
-### 2️⃣ **پروژه ۲: رگرسیون خطی دستی**
+### 2️⃣ [**پروژه ۲: رگرسیون خطی دستی**](project-2-manual-linear-regression/)
 - **سطح**: مبتدی
 - **موضوع**: پیاده‌سازی فرمول ریاضی Linear Regression
 - ```bash
@@ -34,7 +34,7 @@ pip install -r requirements.txt
   python manual_linear_regression.py
   ```
 
-### 3️⃣ **پروژه ۳: دمای ملبورن با scikit-learn**
+### 3️⃣ [**پروژه ۳: دمای ملبورن با scikit-learn**](project-3-sklearn-linear-regression/)
 - **سطح**: میانی
 - **موضوع**: استفاده از کتابخانه scikit-learn
 - ```bash
@@ -42,7 +42,7 @@ pip install -r requirements.txt
   python melbourne_temp_prediction.py
   ```
 
-### 4️⃣ **پروژه ۴: پیش‌بینی قیمت خانه**
+### 4️⃣ [**پروژه ۴: پیش‌بینی قیمت خانه**](project-4-house-price-prediction/)
 - **سطح**: میانی
 - **موضوع**: Multiple Linear Regression با چند ویژگی
 - ```bash
@@ -50,7 +50,7 @@ pip install -r requirements.txt
   python tehran_house_price.py
   ```
 
-### 5️⃣ **پروژه ۵: نمره‌ی دانش‌آموز**
+### 5️⃣ [**پروژه ۵: نمره‌ی دانش‌آموز**](project-5-student-score-prediction/)
 - **سطح**: میانی
 - **موضوع**: Train/Test Split و ارزیابی مدل
 - ```bash
@@ -58,7 +58,7 @@ pip install -r requirements.txt
   python student_score_prediction.py
   ```
 
-### 6️⃣ **پروژه ۶: قبولی دانش‌آموز (Classification)**
+### 6️⃣ [**پروژه ۶: قبولی دانش‌آموز (Classification)**](project-6-student-pass-fail-prediction/)
 - **سطح**: پیشرفته
 - **موضوع**: Classification و Logistic Regression
 - ```bash
@@ -66,7 +66,7 @@ pip install -r requirements.txt
   python student_pass_fail_prediction.py
   ```
 
-### 7️⃣ **پروژه ۷: بقاء کشتی تایتانیک (Classification)**
+### 7️⃣ [**پروژه ۷: بقاء کشتی تایتانیک (Classification)**](project-7-titanic-classification/)
 - **سطح**: پیشرفته
 - **موضوع**: Classification پیشرفته - مقایسه چند مدل
 - ```bash
