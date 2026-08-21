@@ -13,11 +13,12 @@
 - منحنی احتمال قبولی (Sigmoid Curve) رو در کنار داده‌های واقعی رسم می‌کنه
 
 ## نحوه‌ی اجرا
-
+```bash
 pip install pandas numpy matplotlib scikit-learn
-
+```
+```bash
 python student_pass_fail_prediction.py
-
+```
 
 ---
 
@@ -36,7 +37,9 @@ study hours (not their exact score).
 - Plots the predicted probability curve (Sigmoid Curve) alongside actual data points
 
 ## How to run
-
+```bash
 pip install pandas numpy matplotlib scikit-learn
-
+```
+```bash
 python student_pass_fail_prediction.py
+```
