@@ -66,11 +66,19 @@ pip install -r requirements.txt
   python student_pass_fail_prediction.py
   ```
 
+### 7️⃣ **پروژه ۷: بقاء کشتی تایتانیک (Classification)**
+- **سطح**: پیشرفته
+- **موضوع**: Classification پیشرفته - مقایسه چند مدل
+- ```bash
+  cd project-7-titanic-classification
+  python titanic_classification.py
+  ```
+
 ---
 
 ## 📦 نیازمندی‌ها
 
 - Python 3.8+
-- NumPy، Pandas، Matplotlib، Scikit-learn
+- NumPy، Pandas، Matplotlib، Scikit-learn، Seaborn
 
 (همه در `requirements.txt`)
