@@ -12,11 +12,12 @@ Regression. این پروژه علاوه بر مدل، مفهوم Train/Test Spl
 - نموداری از داده‌ی آموزش، داده‌ی تست، و خط پیش‌بینی رسم می‌کنه
 
 ## نحوه‌ی اجرا
-
+```bash
 pip install numpy pandas matplotlib scikit-learn
-
+```
+```bash
 python student_score_prediction.py
-
+```
 
 ---
 
@@ -34,7 +35,9 @@ using R² Score.
 - Plots the training data, test data, and the regression line
 
 ## How to run
-
+```bash
 pip install numpy pandas matplotlib scikit-learn
-
+```
+```bash
 python student_score_prediction.py
+```
