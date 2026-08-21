@@ -11,11 +11,12 @@
 - نموداری از داده‌های واقعی و خط پیش‌بینی رسم می‌کنه
 
 ## نحوه‌ی اجرا
-
+```bash
 pip install numpy matplotlib
-
+```
+```bash
 python manual_linear_regression.py
-
+```
 
 ---
 
@@ -32,7 +33,9 @@ Regression, without scikit-learn, to understand the underlying math.
 - Plots the actual data points and the regression line
 
 ## How to run
-
+```bash
 pip install numpy matplotlib
-
+```
+```bash
 python manual_linear_regression.py
+```
