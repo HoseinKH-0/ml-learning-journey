@@ -13,11 +13,12 @@
 - نموداری از مقایسه‌ی قیمت واقعی با قیمت پیش‌بینی‌شده رسم می‌کنه
 
 ## نحوه‌ی اجرا
-
+```bash
 pip install numpy pandas matplotlib scikit-learn
-
+```
+```bash
 python tehran_house_price.py
-
+```
 
 
 ⚠️ توجه: قیمت‌های این دیتاست مربوط به سال‌های قدیم‌تره و با بازار
@@ -40,11 +41,12 @@ Predicting Tehran house prices using several features at once
 - Plots actual vs. predicted prices
 
 ## How to run
-
+```bash
 pip install numpy pandas matplotlib scikit-learn
-
+```
+```bash
 python tehran_house_price.py
-
+```
 
 ⚠️ Note: prices in this dataset reflect an older time period and do
 not match current market prices. This project was purely for learning purposes.
