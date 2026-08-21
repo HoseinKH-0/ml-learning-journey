@@ -62,7 +62,7 @@ print(f"Accuracy: {accuracy:.2f}")
 #============================================================================
 #رسم نمودار برای بهتر نشون دادن نتیجه
 plt.scatter(x, y, color="blue", label="Actual Data")
-plt.plot(hours_range, prob_curve, color="red", label="Predicted Probability")
+plt.plot(hours_range, prob_curve, color="red", label="Predicted Probability", linewidth=3)
 plt.xlabel("Study Hours")
 plt.ylabel("Passed (0 = No, 1 = Yes)")
 plt.title("Study Hours vs Pass/Fail")
