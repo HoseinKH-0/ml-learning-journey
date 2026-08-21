@@ -40,7 +40,7 @@ model.fit(x_train, y_train)
 #پیشبینی مدل روی داده ی تست
 prediction = model.predict(x_test)
 
-#محاسبه ی احتمال قبولی برای یه بازی
+#محاسبه ی احتمال قبولی برای یه بازه
 hours_range = np.linspace(x["Hours"].min(), x["Hours"].max(), 100)
 
 #برای اینکه مدل ورودی دو بعدی می خواد
