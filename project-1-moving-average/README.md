@@ -31,7 +31,9 @@ average of recent data points, without using any ML library.
 - Shows error statistics (mean, min, max) and a chart of the error trend
 
 ## How to run
-
+```bash
 pip install numpy matplotlib
-
+```
+```bash
 python moving_average.py
+```
