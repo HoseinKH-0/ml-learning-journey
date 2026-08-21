@@ -10,11 +10,12 @@
 - نموداری از داده‌های واقعی و خط پیش‌بینی مدل رسم می‌کنه
 
 ## نحوه‌ی اجرا
-
+```bash
 pip install numpy pandas matplotlib scikit-learn
-
+```
+```bash
 python melbourne_temp_prediction.py
-
+```
 
 
 ---
@@ -31,7 +32,9 @@ implementation, applied to a real, larger dataset.
 - Plots the actual data points and the model's regression line
 
 ## How to run
-
+```bash
 pip install numpy pandas matplotlib scikit-learn
-
+```
+```bash
 python melbourne_temp_prediction.py
+```
