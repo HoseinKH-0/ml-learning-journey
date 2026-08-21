@@ -79,6 +79,6 @@ pip install -r requirements.txt
 ## 📦 نیازمندی‌ها
 
 - Python 3.8+
-- NumPy، Pandas، Matplotlib، Scikit-learn، Seaborn
+- NumPy، Pandas، Matplotlib، Scikit-learn
 
 (همه در `requirements.txt`)
