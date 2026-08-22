@@ -17,7 +17,7 @@
 pip install numpy pandas matplotlib scikit-learn streamlit
 ```
 ```bash
-streamlib run tehran_house_price.py
+streamlit run tehran_house_price.py
 ```
 
 
