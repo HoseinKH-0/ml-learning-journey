@@ -46,7 +46,7 @@ Predicting Tehran house prices using several features at once
 pip install numpy pandas matplotlib scikit-learn streamlit
 ```
 ```bash
-streamlib run tehran_house_price.py
+streamlit run tehran_house_price.py
 ```
 
 ⚠️ Note: prices in this dataset reflect an older time period and do
