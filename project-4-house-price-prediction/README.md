@@ -14,10 +14,10 @@
 
 ## نحوه‌ی اجرا
 ```bash
-pip install numpy pandas matplotlib scikit-learn streamlit
+pip install numpy pandas matplotlib scikit-learn
 ```
 ```bash
-streamlit run tehran_house_price.py
+python tehran_house_price.py
 ```
 
 
@@ -43,10 +43,10 @@ Predicting Tehran house prices using several features at once
 
 ## How to run
 ```bash
-pip install numpy pandas matplotlib scikit-learn streamlit
+pip install numpy pandas matplotlib scikit-learn
 ```
 ```bash
-streamlit run tehran_house_price.py
+python tehran_house_price.py
 ```
 
 ⚠️ Note: prices in this dataset reflect an older time period and do
