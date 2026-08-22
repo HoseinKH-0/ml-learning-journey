@@ -3,6 +3,23 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
+import streamlit as st
+#============================================================================
+
+
+
+#============================================================================
+st.title("پروژه ی 4: پیشبینی قیمت خونه")
+st.write("""پیش‌بینی قیمت خونه‌های تهران با استفاده از چند ویژگی همزمان، روی یه دیتاست واقعی و نسبتاً کثیف.
+
+این پروژه چیکار می‌کنه؟
+
+دیتاست قیمت خونه‌های تهران رو از یه فایل می‌خونه
+داده‌ها رو پاک‌سازی می‌کنه (حذف ستون‌های غیرضروری، تبدیل مقادیر نامعتبر، حذف سطرهای خراب)
+با ویژگی‌های متراژ، تعداد اتاق، پارکینگ، انباری و آسانسور، یه مدل رگرسیون چندمتغیره می‌سازه
+برای یه خونه‌ی فرضی، قیمت رو پیش‌بینی می‌کنه
+نموداری از مقایسه‌ی قیمت واقعی با قیمت پیش‌بینی‌شده رسم می‌کنه""")
+st.caption("این مدل برای نمایش فرآیند ساخت یک اپلیکیشن پیش‌بینی طراحی شده و دقت آن به داده‌های ورودی بستگی دارد.")
 #============================================================================
 
 
@@ -23,6 +40,10 @@ data["Area"] = pd.to_numeric(data["Area"], errors="coerce")
 
 # حذف سطرهایی که مقدار NaN توی ستون Area دارن
 data = data.dropna(subset=["Area"])
+
+# اگه کاربر دکمه رو بزنه دیتاست نمایش داده میشه
+if st.checkbox("نمایش دیتاست"):
+    st.dataframe(data)
 #============================================================================
 
 
@@ -46,20 +67,25 @@ model.fit(x, y)
 
 
 #============================================================================
+# گرفتن اطلاعات از کاربر
+area = st.sidebar.number_input("متراز را وارد کنید.", min_value=30, max_value=800)
+room = st.sidebar.number_input("تعداد اتاق را وارد کنید.", min_value=1, max_value=5)
+parking = 1 if st.sidebar.checkbox("پارکینگ.") else 0
+warehouse = 1 if st.sidebar.checkbox("انباری.") else 0
+elavator = 1 if st.sidebar.checkbox("آسانسور.") else 0
+
 # پیش‌بینی قیمت یه خونه‌ی فرضی با: متراژ ۶۰، ۲ اتاق، پارکینگ دارد، انباری ندارد، آسانسور دارد
-new_house = np.array([[60, 2, 1, 0, 1]])
+new_house = np.array([[area, room, parking, warehouse, elavator]])
 predicted_price = model.predict(new_house)
-print(f"قیمت خونه ی پیشبینی شده به تومان برابر است با: {predicted_price[0]:,.0f}")
-#============================================================================
+if st.button("نمایش پیشبینی مدل"):
+    st.success(f"قیمت خونه ی پیشبینی شده به تومان برابر است با: {predicted_price[0]:,.0f}")
 
-
-
-#============================================================================
 # نمودار: مقایسه‌ی قیمت واقعی با قیمت پیش‌بینی‌شده‌ی مدل، برای همه‌ی خونه‌های دیتاست
-predicted_all = model.predict(x)
-plt.scatter(y, predicted_all, s=5, alpha=0.5)
-plt.xlabel("Actual Price (Toman)")
-plt.ylabel("Predicted Price (Toman)")
-plt.title("Actual vs Predicted House Prices in Tehran")
-plt.show()
+    predicted_all = model.predict(x)
+    fig, ax = plt.subplots()
+    ax.scatter(y, predicted_all, s=5, alpha=0.5)
+    ax.set_xlabel("Actual Price (Toman)")
+    ax.set_ylabel("Predicted Price (Toman)")
+    ax.set_title("Actual vs Predicted House Prices in Tehran")
+    st.pyplot(fig)
 #============================================================================
