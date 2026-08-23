@@ -1,0 +1,85 @@
+#============================================================================
+#کتابخانه های مورد نیاز:
+#pandas: برای خواندن دیتاست
+#numpy: برای محاسبات
+#matplotlib: برای رسم نمودار
+#sklearn: برای آموزش به ماشین و تقسیم بندی داده به دو بخش تست و آموزش
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+from sklearn.linear_model import LogisticRegression
+import streamlit as st
+#============================================================================
+
+
+#============================================================================
+st.title("پروژه ۶: پیش‌بینی قبولی دانش‌آموز (دسته‌بندی)")
+st.write("""این پروژه چیکار می‌کنه؟
+
+- از همون دیتاست ساعت مطالعه/نمره استفاده می‌کنه، ولی یه ستون جدید
+  می‌سازه: قبول (نمره ≥ ۵۰) یا رد (نمره < ۵۰)
+- داده رو به بخش آموزش و تست تقسیم می‌کنه
+- یه مدل لاجستیک رگرسیون می‌سازه و آموزش می‌ده
+- دقت مدل رو با Accuracy Score ارزیابی می‌کنه
+- منحنی احتمال قبولی رو در کنار داده‌های واقعی رسم می‌کنه""")
+st.caption("این مدل برای نمایش فرآیند ساخت یک اپلیکیشن پیش‌بینی طراحی شده و دقت آن به داده‌های ورودی بستگی دارد.")
+
+#خواندن دیتاست مطالعه ی دانش آموز و نمره ی دانش آموز
+data = pd.read_csv("student_scores.csv")
+
+#اضافه کردن ستونی به اسم Passed که سطر های آن شامل True و False هستش
+data["Passed"] = (data["Scores"] >= 50).astype(int) #astype(int) برای این هستش که مقادیر True و False رو به عدد تبدیل کنیم(True = 1, False = 0)
+
+
+x = data[["Hours"]]
+y = data["Passed"]
+
+if st.checkbox("نمایش دیتاست"):
+    st.dataframe(data)
+
+#داده هامون رو به دو بخش آموزش (%80) و تست (%20) تقسیم میکنیم
+#این کار برای ارزیابی خطا استفاده میشه
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
+#============================================================================
+
+
+#============================================================================
+#آموزش دادن به مدل با روش LogisticRegression
+model = LogisticRegression()
+
+#اول به مدل داده های آموزشی رو فقط میدیم
+model.fit(x_train, y_train)
+
+#پیشبینی مدل روی داده ی تست
+prediction = model.predict(x_test)
+
+#محاسبه ی احتمال قبولی برای یه بازه
+hours_range = np.linspace(x["Hours"].min(), x["Hours"].max(), 100)
+
+#برای اینکه مدل ورودی دو بعدی می خواد
+hours_range_2d = hours_range.reshape(-1, 1)
+
+#فقط ستون دوم رو نگه میداریم
+prob_curve = model.predict_proba(hours_range_2d)[:, 1]
+
+
+#مقایسه میکنیم که ببینم پیشبینی با جواب اصلی چقدر خطا داشتند
+#اگه مثلا accuracy برابر با 0.9 بشه یعنی دقت %90 بوده
+accuracy = accuracy_score(y_test, prediction)
+
+if st.button("نمایش پیشبینی مدل روی داده ی تست"):
+    st.success(f"پیشبینی مدل: {prediction}")
+    st.success(f"دقت مدل: {accuracy:.2f}")
+
+    #رسم نمودار برای بهتر نشون دادن نتیجه
+    fig, ax = plt.subplots()
+    ax.scatter(x, y, color="blue", label="Actual Data")
+    ax.plot(hours_range, prob_curve, color="red", label="Predicted Probability", linewidth=3)
+    ax.set_xlabel("Study Hours")
+    ax.set_ylabel("Passed (0 = No, 1 = Yes)")
+    ax.set_title("Study Hours vs Pass/Fail")
+    ax.legend()
+    st.pyplot(fig)
+#============================================================================
