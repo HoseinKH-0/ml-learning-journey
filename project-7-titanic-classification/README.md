@@ -16,7 +16,7 @@
 ## نحوه‌ی اجرا
 
 ```bash
-pip install numpy pandas matplotlib scikit-learn seaborn
+pip install numpy pandas matplotlib scikit-learn
 ```
 
 ```bash
@@ -43,7 +43,7 @@ This is one of the most famous datasets in the Data Science and Machine Learning
 ## How to run
 
 ```bash
-pip install numpy pandas matplotlib scikit-learn seaborn
+pip install numpy pandas matplotlib scikit-learn
 ```
 
 ```bash
