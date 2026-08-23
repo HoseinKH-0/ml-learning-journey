@@ -79,6 +79,6 @@ pip install -r requirements.txt
 ## 📦 نیازمندی‌ها
 
 - Python 3.8+
-- NumPy، Pandas، Matplotlib، Scikit-learn streamlit
+- NumPy، Pandas، Matplotlib، Scikit-learn, Streamlit
 
 (همه در `requirements.txt`)
