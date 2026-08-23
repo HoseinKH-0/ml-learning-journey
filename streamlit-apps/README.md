@@ -20,6 +20,7 @@ streamlit run [اسم پروژه].py
 - - -
 ## عیب یابی
 اگر با خطای **ModuleNotFoundError: No Module Named '. . .'** رو به رو شدید
+
 1.میتوانید کتابخانه ها را دستی نصب کنید:
 ```bash
 pip install [اسم کتابخانه]
