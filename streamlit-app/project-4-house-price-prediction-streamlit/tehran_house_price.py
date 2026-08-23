@@ -68,7 +68,9 @@ model.fit(x, y)
 
 #============================================================================
 # گرفتن اطلاعات از کاربر
-area = st.sidebar.number_input("متراز را وارد کنید.", min_value=40, max_value=800)
+min_val = int(data["Area"].min())
+max_val = int(data["Area"].max())
+area = st.sidebar.number_input("متراز را وارد کنید.", min_value=min_val, max_value=max_val)
 room = st.sidebar.number_input("تعداد اتاق را وارد کنید.", min_value=1, max_value=5)
 parking = 1 if st.sidebar.checkbox("پارکینگ.") else 0
 warehouse = 1 if st.sidebar.checkbox("انباری.") else 0
