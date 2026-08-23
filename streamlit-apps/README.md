@@ -5,20 +5,34 @@
 - - -
 ## نحوه ی نصب و اجرا
 1.ابتدا کتابخانه ها را نصب کنید:
-```bash pip install -r requirements.txt ```
+```bash
+pip install -r requirements.txt
+```
 2.به این پوشه بروید:
-```bash cd streamlit-apps ```
+```bash
+cd streamlit-apps
+```
 3.هر پروژه را با دستور زیر اجرا کنید:
-```bash streamlit run [اسم پروژه].py ```
+```bash
+streamlit run [اسم پروژه].py
+```
 4.مرورگر شما به طور خودکار باز میشود و برنامه را نمایش میدهد.
 - - -
 ## عیب یابی
 ### اگر با خطای ** ModuleNotFoundError: No Module Named '. . . .' ** رو به رو شدید یعنی کتابخانه های مورد نظر نصب نیستند!
 1.میتوانید کتابخانه ها را دستی نصب کنید:
-```bash pip install [اسم کتابخانه] ```
+```bash
+pip install [اسم کتابخانه]
+```
 2.اگر باز هم با ارور مواجه شدید بهترین راه استفاده از محیط مجازی هست، با دستورات زیر محیط مجازی را بسازید و آن را فعال کنید:
-```bash python -m venv .venv ```
-```bash .venv/Scripts/Activate ```
+```bash
+python -m venv .venv
+```
+```bash
+.venv/Scripts/Activate
+```
 حالا که محیط مجازی فعال هست میتونید داخل آن کتابخانه ها را نصب کنید:
-```bash pip install [اسم کتابخانه] ```
+```bash
+pip install [اسم کتابخانه]
+```
 
