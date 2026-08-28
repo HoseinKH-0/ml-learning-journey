@@ -102,6 +102,7 @@ Streamlit - برای تمرین ساخت رابط کاربری روی مدل‌�
 ### نحوه‌ی اجرا:
 ```bash
 cd Streamlit-apps
+cd <foldername>
 streamlit run <filename>.py
 ```
 
