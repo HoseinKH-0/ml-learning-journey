@@ -18,75 +18,75 @@ pip install -r requirements.txt
 
 ## 📁 پروژه‌ها
 
-### 1️⃣ [**پروژه ۱: میانگین متحرک**](project-01-moving-average/)
+### 1️⃣ [**پروژه ۱: میانگین متحرک**](project-1-moving-average/)
 - **سطح**: مبتدی
 - **موضوع**: پیش‌بینی ساده بدون کتابخانه‌ی ML
 - ```bash
-  cd project-01-moving-average
+  cd project-1-moving-average
   python moving_average.py
   ```
 
-### 2️⃣ [**پروژه ۲: رگرسیون خطی دستی**](project-02-manual-linear-regression/)
+### 2️⃣ [**پروژه ۲: رگرسیون خطی دستی**](project-2-manual-linear-regression/)
 - **سطح**: مبتدی
 - **موضوع**: پیاده‌سازی فرمول ریاضی Linear Regression
 - ```bash
-  cd project-02-manual-linear-regression
+  cd project-2-manual-linear-regression
   python manual_linear_regression.py
   ```
 
-### 3️⃣ [**پروژه ۳: دمای ملبورن با scikit-learn**](project-03-sklearn-linear-regression/)
+### 3️⃣ [**پروژه ۳: دمای ملبورن با scikit-learn**](project-3-sklearn-linear-regression/)
 - **سطح**: میانی
 - **موضوع**: استفاده از کتابخانه scikit-learn
 - ```bash
-  cd project-03-sklearn-linear-regression
+  cd project-3-sklearn-linear-regression
   python melbourne_temp_prediction.py
   ```
 
-### 4️⃣ [**پروژه ۴: پیش‌بینی قیمت خانه**](project-04-house-price-prediction/)
+### 4️⃣ [**پروژه ۴: پیش‌بینی قیمت خانه**](project-4-house-price-prediction/)
 - **سطح**: میانی
 - **موضوع**: Multiple Linear Regression با چند ویژگی
 - ```bash
-  cd project-04-house-price-prediction
+  cd project-4-house-price-prediction
   python tehran_house_price.py
   ```
 
-### 5️⃣ [**پروژه ۵: نمره‌ی دانش‌آموز**](project-05-student-score-prediction/)
+### 5️⃣ [**پروژه ۵: نمره‌ی دانش‌آموز**](project-5-student-score-prediction/)
 - **سطح**: میانی
 - **موضوع**: Train/Test Split و ارزیابی مدل
 - ```bash
-  cd project-05-student-score-prediction
+  cd project-5-student-score-prediction
   python student_score_prediction.py
   ```
 
-### 6️⃣ [**پروژه ۶: قبولی دانش‌آموز (Classification)**](project-06-student-pass-fail-prediction/)
+### 6️⃣ [**پروژه ۶: قبولی دانش‌آموز (Classification)**](project-6-student-pass-fail-prediction/)
 - **سطح**: پیشرفته
 - **موضوع**: Classification و Logistic Regression
 - ```bash
-  cd project-06-student-pass-fail-prediction
+  cd project-6-student-pass-fail-prediction
   python student_pass_fail_prediction.py
   ```
 
-### 7️⃣ [**پروژه ۷: بقاء کشتی تایتانیک (Classification)**](project-07-titanic-classification/)
+### 7️⃣ [**پروژه ۷: بقاء کشتی تایتانیک (Classification)**](project-7-titanic-classification/)
 - **سطح**: پیشرفته
 - **موضوع**: Classification با Logistic Regression
 - ```bash
-  cd project-07-titanic-classification
+  cd project-7-titanic-classification
   python titanic_classification.py
   ```
 
-### 8️⃣ [**پروژه ۸: بقاء تایتانیک با Decision Tree**](project-08-titanic-decision-tree/)
+### 8️⃣ [**پروژه ۸: بقاء تایتانیک با Decision Tree**](project-8-titanic-decision-tree/)
 - **سطح**: پیشرفته
 - **موضوع**: Decision Tree و Hyperparameter Tuning (max_depth)
 - ```bash
-  cd project-08-titanic-decision-tree
+  cd project-8-titanic-decision-tree
   python titanic_decision_tree.py
   ```
 
-### 9️⃣ [**پروژه ۹: بقاء تایتانیک با Random Forest**](project-09-titanic-random-forest/)
+### 9️⃣ [**پروژه ۹: بقاء تایتانیک با Random Forest**](project-9-titanic-random-forest/)
 - **سطح**: پیشرفته
 - **موضوع**: Random Forest (Ensemble Learning) و رسم درخت‌های داخلی
 - ```bash
-  cd project-09-titanic-random-forest
+  cd project-9-titanic-random-forest
   python titanic_random_forest.py
   ```
 
@@ -110,7 +110,7 @@ Streamlit - برای تمرین ساخت رابط کاربری روی مدل‌�
 
 ### نحوه‌ی اجرا:
 ```bash
-cd streamlit-apps
+cd Streamlit-apps
 cd <foldername>
 streamlit run <filename>.py
 ```
