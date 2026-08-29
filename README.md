@@ -90,6 +90,15 @@ pip install -r requirements.txt
   python titanic_random_forest.py
   ```
 
+### 🔟 [**پروژه ۱۰: تشخیص بیماری قلبی (مقایسه‌ی چند مدل)**](project-10-heart-disease-classification/)
+- **سطح**: پیشرفته
+- **موضوع**: مقایسه‌ی Logistic Regression, Decision Tree, Random Forest
+  با معیارهای Accuracy, Recall, Precision, F1-Score
+- ```bash
+  cd project-10-heart-disease-classification
+  python heart_disease_classification.py
+  ```
+
 ---
 
 ## 🖥️ اپ‌های تعاملی (Streamlit)
@@ -97,7 +106,7 @@ pip install -r requirements.txt
 نسخه‌ی تعاملی و کاربرپسند چند تا از پروژه‌های بالا، ساخته‌شده با
 Streamlit - برای تمرین ساخت رابط کاربری روی مدل‌های ML.
 
-📁 پوشه: [`streamlit-apps/`](streamlit-apps/)
+📁 پوشه: [`Streamlit-apps/`](Streamlit-apps/)
 
 ### نحوه‌ی اجرا:
 ```bash
