@@ -106,7 +106,7 @@ pip install -r requirements.txt
 نسخه‌ی تعاملی و کاربرپسند چند تا از پروژه‌های بالا، ساخته‌شده با
 Streamlit - برای تمرین ساخت رابط کاربری روی مدل‌های ML.
 
-📁 پوشه: [`Streamlit-apps/`](Streamlit-apps/)
+📁 پوشه: [`streamlit-apps/`](streamlit-apps/)
 
 ### نحوه‌ی اجرا:
 ```bash
