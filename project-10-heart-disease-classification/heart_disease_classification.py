@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, f1_score, recall_score, precision_score
 from sklearn.preprocessing import StandardScaler
@@ -16,17 +17,18 @@ from sklearn.preprocessing import StandardScaler
 
 
 #============================================================================
-# گرفتن یک عدد از کاربر به عنوان مدل یاد گیرنده (1 = LogisticRegression, 2 = DecisionTreeClassifier, 3 = RandomForestClassifier) 
+# گرفتن یک عدد از کاربر به عنوان مدل یاد گیرنده (1 = LogisticRegression, 2 = DecisionTreeClassifier, 3 = RandomForestClassifier, 4 = KNeighborsClassifier) 
 while True:
     try:
         prediction_number = int(input("""
 1.LogisticRegression
 2.DecisionTreeClassifier
 3.RandomForestClassifier
+4.KNeighborsClassifier
 
 Enter the desired model number: """))
         
-        if prediction_number >= 1 and prediction_number <= 3:
+        if prediction_number >= 1 and prediction_number <= 4:
             break
         else:
             print("Invalid number")
@@ -38,7 +40,7 @@ Enter the desired model number: """))
 
 
 #============================================================================
-# برای جلوگیری از نوشتن کد های تکراری از یک تابع استفاده میکنیم (چون 3 مدل مختلف داریم)
+# برای جلوگیری از نوشتن کد های تکراری از یک تابع استفاده میکنیم (چون 4 مدل مختلف داریم)
 def Error_evaluation(prediction):
 
     accuracy = accuracy_score(y_test, prediction)
@@ -78,21 +80,27 @@ model_2.fit(x_train_scaled, y_train)
 # آموزش دادن مدل سوم با روش جنگل تصادفی
 model_3 = RandomForestClassifier(max_depth=4, random_state=42)
 model_3.fit(x_train_scaled, y_train)
+
+# آموزش دادن مدل چهارم با روش نزدیک ترین همسایه
+model_4 = KNeighborsClassifier(n_neighbors=7)
+model_4.fit(x_train_scaled, y_train)
 #============================================================================
 
 
 
 #============================================================================
-# برای هر سه مدل یک پیشبینی از روی داده های تست میکنیم.
+# برای هر چهار مدل یک پیشبینی از روی داده های تست میکنیم.
 prediction_1 = model_1.predict(x_test_scaled)
 prediction_2 = model_2.predict(x_test_scaled)
 prediction_3 = model_3.predict(x_test_scaled)
+prediction_4 = model_4.predict(x_test_scaled)
 
 
 predictions = {
     1: prediction_1,
     2: prediction_2,
-    3: prediction_3
+    3: prediction_3,
+    4: prediction_4
 }
 
 accuracy, recall, precision, f1 = Error_evaluation(predictions[prediction_number])
