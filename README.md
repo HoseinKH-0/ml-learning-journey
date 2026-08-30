@@ -92,7 +92,7 @@ pip install -r requirements.txt
 
 ### 🔟 [**پروژه ۱۰: تشخیص بیماری قلبی (مقایسه‌ی چند مدل)**](project-10-heart-disease-classification/)
 - **سطح**: پیشرفته
-- **موضوع**: مقایسه‌ی Logistic Regression, Decision Tree, Random Forest
+- **موضوع**: مقایسه‌ی KNN ,Logistic Regression, Decision Tree, Random Forest
   با معیارهای Accuracy, Recall, Precision, F1-Score
 - ```bash
   cd project-10-heart-disease-classification
