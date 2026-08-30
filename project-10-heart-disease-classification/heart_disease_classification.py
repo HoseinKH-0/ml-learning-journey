@@ -10,6 +10,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, f1_score, recall_score, precision_score
+from sklearn.preprocessing import StandardScaler
 #============================================================================
 
 
@@ -24,7 +25,12 @@ while True:
 3.RandomForestClassifier
 
 Enter the desired model number: """))
-        break
+        
+        if prediction_number >= 1 and prediction_number <= 3:
+            break
+        else:
+            print("Invalid number")
+
     except ValueError:
         print("Invalid input!")
 #============================================================================
@@ -55,26 +61,32 @@ y = data["target"]
 # تقسیم کردن داده ها به دو بخش آموزش و تست
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
+# مقیاس بندی ویژگی ها چون بازه ی اعداد خیلی اختلاف دارن
+scaler = StandardScaler()
+
+x_train_scaled = scaler.fit_transform(x_train)
+x_test_scaled = scaler.transform(x_test)
+
 # آموزش دادن مدل اول با روش لاجستیک رگرسیون
 model_1 = LogisticRegression()
-model_1.fit(x_train, y_train)
+model_1.fit(x_train_scaled, y_train)
 
 # آموزش دادن مدل دوم با روش درخت تصمیم
 model_2 = DecisionTreeClassifier(max_depth=4, random_state=42)
-model_2.fit(x_train, y_train)
+model_2.fit(x_train_scaled, y_train)
 
 # آموزش دادن مدل سوم با روش جنگل تصادفی
 model_3 = RandomForestClassifier(max_depth=4, random_state=42)
-model_3.fit(x_train, y_train)
+model_3.fit(x_train_scaled, y_train)
 #============================================================================
 
 
 
 #============================================================================
 # برای هر سه مدل یک پیشبینی از روی داده های تست میکنیم.
-prediction_1 = model_1.predict(x_test)
-prediction_2 = model_2.predict(x_test)
-prediction_3 = model_3.predict(x_test)
+prediction_1 = model_1.predict(x_test_scaled)
+prediction_2 = model_2.predict(x_test_scaled)
+prediction_3 = model_3.predict(x_test_scaled)
 
 
 predictions = {
