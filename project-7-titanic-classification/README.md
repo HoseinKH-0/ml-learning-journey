@@ -10,7 +10,7 @@
 - ویژگی‌های مرتبط (سن، جنسیت، کلاس سفر، قیمت بلیط) را انتخاب می‌کنه
 - داده رو به بخش آموزش (۸۰٪) و تست (۲۰٪) تقسیم می‌کنه
 - مدل Classification (Logistic Regression) می‌سازه و آموزش می‌ده
-- هر مدل رو ارزیابی می‌کنه و دقت هر یک رو با Accuracy, Precision, Recall و F1-Score گزارش می‌ده
+- مدل رو ارزیابی می‌کنه و دقت هر یک رو با Accuracy گزارش می‌ده
 - Confusion Matrix و نموداری از دقت مدل‌ها رسم می‌کنه
 
 ## نحوه‌ی اجرا
@@ -37,7 +37,7 @@ This is one of the most famous datasets in the Data Science and Machine Learning
 - Selects relevant features (age, gender, passenger class, ticket price)
 - Splits the data into 80% training and 20% test sets
 - Builds and trains multiple Classification models (Logistic Regression)
-- Evaluates each model and reports accuracy using Accuracy, Precision, Recall, and F1-Score
+- Evaluates each model and reports accuracy using Accuracy
 - Plots the Confusion Matrix and a comparison chart of model accuracies
 
 ## How to run
