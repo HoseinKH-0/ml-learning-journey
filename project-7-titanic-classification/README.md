@@ -9,7 +9,7 @@
 - داده‌ها رو تمیز می‌کنه (حذف مقادیر خالی، تبدیل متغیرهای رشته‌ای به عددی)
 - ویژگی‌های مرتبط (سن، جنسیت، کلاس سفر، قیمت بلیط) را انتخاب می‌کنه
 - داده رو به بخش آموزش (۸۰٪) و تست (۲۰٪) تقسیم می‌کنه
-- چند مدل Classification (Logistic Regression, Decision Tree, Random Forest) می‌سازه و آموزش می‌ده
+- مدل Classification (Logistic Regression) می‌سازه و آموزش می‌ده
 - هر مدل رو ارزیابی می‌کنه و دقت هر یک رو با Accuracy, Precision, Recall و F1-Score گزارش می‌ده
 - Confusion Matrix و نموداری از دقت مدل‌ها رسم می‌کنه
 
@@ -36,7 +36,7 @@ This is one of the most famous datasets in the Data Science and Machine Learning
 - Cleans the data (handles missing values, converts categorical variables to numeric)
 - Selects relevant features (age, gender, passenger class, ticket price)
 - Splits the data into 80% training and 20% test sets
-- Builds and trains multiple Classification models (Logistic Regression, Decision Tree, Random Forest)
+- Builds and trains multiple Classification models (Logistic Regression)
 - Evaluates each model and reports accuracy using Accuracy, Precision, Recall, and F1-Score
 - Plots the Confusion Matrix and a comparison chart of model accuracies
 
