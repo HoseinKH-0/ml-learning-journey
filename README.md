@@ -92,11 +92,20 @@ pip install -r requirements.txt
 
 ### 🔟 [**پروژه ۱۰: تشخیص بیماری قلبی (مقایسه‌ی چند مدل)**](project-10-heart-disease-classification/)
 - **سطح**: پیشرفته
-- **موضوع**: مقایسه‌ی KNN ,Logistic Regression, Decision Tree, Random Forest
+- **موضوع**: مقایسه‌ی Logistic Regression, Decision Tree, Random Forest,
+  KNN + Feature Scaling
   با معیارهای Accuracy, Recall, Precision, F1-Score
 - ```bash
   cd project-10-heart-disease-classification
   python heart_disease_classification.py
+  ```
+
+### 1️⃣1️⃣ [**پروژه ۱۱: مقایسه‌ی مدل‌ها با Cross-Validation**](project-11-cross-validation-model-comparison/)
+- **سطح**: پیشرفته
+- **موضوع**: Cross-Validation و SVM (Support Vector Machine)
+- ```bash
+  cd project-11-cross-validation-model-comparison
+  python cross_validation_comparison.py
   ```
 
 ---
@@ -110,7 +119,7 @@ Streamlit - برای تمرین ساخت رابط کاربری روی مدل‌�
 
 ### نحوه‌ی اجرا:
 ```bash
-cd Streamlit-apps
+cd streamlit-apps
 cd <foldername>
 streamlit run <filename>.py
 ```
